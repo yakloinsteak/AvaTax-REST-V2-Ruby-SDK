@@ -28,9 +28,9 @@ module AvaTax
       # @param include [String] Specifies objects to include in the response after transaction is created
       # @param model [Object] information about the transaction and lines to be added
       # @return [Object]
-      def add_lines(model, options={})
+      def add_lines(model)
         path = "/api/v2/companies/transactions/lines/add"
-        post(path, model, options)
+        post(path, model)
       end
 
 
@@ -193,9 +193,9 @@ module AvaTax
       # @param include [String] Specifies objects to include in the response after transaction is created
       # @param model [Object] The transaction you wish to create or adjust
       # @return [Object]
-      def create_or_adjust_transaction(model, options={})
+      def create_or_adjust_transaction(model)
         path = "/api/v2/transactions/createoradjust"
-        post(path, model, options)
+        post(path, model)
       end
 
 
@@ -231,9 +231,9 @@ module AvaTax
       # @param include [String] Specifies objects to include in the response after transaction is created
       # @param model [Object] The transaction you wish to create
       # @return [Object]
-      def create_transaction(model, options={})
+      def create_transaction(model)
         path = "/api/v2/transactions/create"
-        post(path, model, options)
+        post(path, model)
       end
 
 
@@ -259,9 +259,9 @@ module AvaTax
       # @param include [String] Specifies objects to include in the response after transaction is created
       # @param model [Object] information about the transaction and lines to be removed
       # @return [Object]
-      def delete_lines(model, options={})
+      def delete_lines(model)
         path = "/api/v2/companies/transactions/lines/delete"
-        post(path, model, options)
+        post(path, model)
       end
 
 
@@ -431,9 +431,9 @@ module AvaTax
       # @param include [String] Specifies objects to include in the response after transaction is created
       # @param model [Object] Information about the refund to create
       # @return [Object]
-      def refund_transaction(companyCode, transactionCode, model, options={})
+      def refund_transaction(companyCode, transactionCode, model)
         path = "/api/v2/companies/#{companyCode}/transactions/#{transactionCode}/refund"
-        post(path, model, options)
+        post(path, model)
       end
 
 
